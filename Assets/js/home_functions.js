@@ -1,5 +1,6 @@
 var gameId;
-var curCarril = 1;
+var curCarril = 0;
+var modalPlay = new bootstrap.Modal(document.getElementById("modalPlay"), {});            
 
 window.addEventListener(
     "load",
@@ -86,15 +87,14 @@ function getViewGame(gameId) {
 function getTurno(maxPlayers) {
     var maxPlayers = parseInt(maxPlayers)
     if (maxPlayers >= curCarril) {
-        curCarril = 1;
-    }
-    else{
         curCarril = curCarril + 1;
     }
-    tirarDado();
+    else{
+        curCarril = 1;
+    }    
 }
 
-function tirarDado(carril) {
+function tirarDado() {
   var data = new FormData();
   data.append("gameId", gameId);
   data.append("carril", curCarril);
@@ -102,9 +102,7 @@ function tirarDado(carril) {
   eventRequest(url, data).then((rsp) => {
         document.querySelector('#title-modalPlay').innerHTML = "Es tu turno de tirar " + rsp.name;
         document.querySelector('#regId').value = rsp.id_register;
-        var modalPlay = new bootstrap.Modal(document.getElementById("modalPlay"), {});            
-        modalPlay.show(); 
-        eventTirar();       
+        modalPlay.show();                
   });
 }
 
@@ -116,10 +114,10 @@ function eventTirar() {
         var url = "/home/advanceCart"
         data = new FormData();        
         data.append("regId", regId);
-        eventRequest(url, data).then((rsp) => {                        
-            var modalPlay = new bootstrap.Modal(document.getElementById("modalPlay"), {});            
+        eventRequest(url, data).then((rsp) => {                                    
             modalPlay.hide();      
-            alert()  
+            alert("Sacaste un " + rsp.tiro + " Y avansas " + rsp.distance + "Metros");
+            getViewGame(gameId);  
         });
     },false)
 }

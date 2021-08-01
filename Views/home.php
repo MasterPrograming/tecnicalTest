@@ -24,36 +24,38 @@
     <video src="<?= media(); ?>/media/mainCar.mp4" id="bgVideo" muted autoplay loop>Test</video>
     <h1 class="text-center py-4 my-4" id="main-title">Tira Y Arranca</h1>
     <div id="mainDiv" class="container">
-    <div id="menu" class="justify-content-center">
-        <form id="fmMenu">
-            <fieldset>
-                <legend>Menu</legend>
-                <div id="playersDiv">
+        <div id="menu" class="justify-content-center">
+            <form id="fmMenu">
+                <fieldset>
+                    <legend>Menu</legend>
+                    <div id="playersDiv">
+                        <div class="form-group my-3">
+                            <label for="namePlayer1" class="form-label">Jugador #1</label>
+                            <input type="text" class="form-control" name="namePlayer1">
+                        </div>                    
+                    </div>
+                    <a href="#" id="addPlayer">* Añadir nuevo jugador</a>
                     <div class="form-group my-3">
-                        <label for="namePlayer1" class="form-label">Jugador #1</label>
-                        <input type="text" class="form-control" name="namePlayer1">
-                    </div>                    
-                </div>
-                <a href="#" id="addPlayer">* Añadir nuevo jugador</a>
-                <div class="form-group my-3">
-                    <label for="pist" class="form-label">Selecciona la Pista de carreras</label>
-                    <select name="pist"  class="form-control">
-                        <option value="1">Islas Malvinas 6.000 KM</option>
-                        <option value="2">Ciudad de Mexico 8.000 KM</option>
-                    </select>
-                </div>
-                <div class="form-group my-4 text-center">
-                    <button type="submit" class="btn btn-primary" id="btnPlayGame">!Jugar!</button>
-                </div>
-            </fieldset>
-        </form>    
+                        <label for="pist" class="form-label">Selecciona la Pista de carreras</label>
+                        <select name="pist"  class="form-control">
+                            <option value="1">Islas Malvinas 6.000 KM</option>
+                            <option value="2">Ciudad de Mexico 8.000 KM</option>
+                        </select>
+                    </div>
+                    <div class="form-group my-4 text-center">
+                        <button type="submit" class="btn btn-primary" id="btnPlayGame">!Jugar!</button>
+                    </div>
+                </fieldset>
+            </form>    
+        </div>
+    </div>
+    <div class="container text-center">
+        <button type="button" class="btn btn-warning d-none" onclick="tirarDado();">Tirar</button>
     </div>
     <div id="ranking">
 
     </div>
  
-       
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>

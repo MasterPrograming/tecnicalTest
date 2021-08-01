@@ -1,4 +1,4 @@
-<div class="modal" tabindex="-1" id="modalPlay" data-backdrop="static" aria-hidden="true">
+<div class="modal" tabindex="-1" id="modalPlay"  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

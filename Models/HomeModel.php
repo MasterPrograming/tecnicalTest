@@ -81,7 +81,21 @@ class HomeModel extends Mysql
 
     public function updateReg($distance, $regId)
     {
-        //aqui lo deje ._. se me acabo el tiempo
+        $actualDistance = $this->actualDistance($regId);
+        $distance = floatval($distance);
+        $finalDistance = $actualDistance + $distance;
+        $arrData = array($finalDistance);    
+        $sql = "UPDATE registers SET advanced_km = ? WHERE id = $regId";
+        $request = $this->update($sql, $arrData);
+        return $request;
+    }
+
+    public function actualDistance($regId)
+    {
+        $sql = "SELECT advanced_km FROM registers r WHERE id = $regId";
+        $request = $this->select($sql);
+        $actualDistance = $request['advanced_km'];
+        return floatval($actualDistance);
     }
 
 }
