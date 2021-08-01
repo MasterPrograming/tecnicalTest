@@ -1,0 +1,57 @@
+body {
+  background-image: radial-gradient(
+    circle at 120.71% 50%,
+    #d1fff8 0,
+    #befff6 10%,
+    #a7fff4 20%,
+    #8dfff3 30%,
+    #6cfbf2 40%,
+    #3cf2f2 50%,
+    #00e8f3 60%,
+    #00dff5 70%,
+    #00d6f9 80%,
+    #00cefd 90%,
+    #00c6ff 100%
+  );
+}
+
+#bgVideo {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+#menu {
+    margin-left: 5px;
+    border: ridge;
+    border-color: #00c6ff;    
+    border-width: 2px;
+    border-radius: 30%;
+    padding: 4rem;
+    background-color: #fff;
+    max-width: 350px;
+    display: flex;
+    left: auto;    
+}
+
+#main-title {
+    font-weight: 800;
+    color: brown;
+}
+
+/* #video_pattern {
+  background: #fff;
+  position: fixed;
+  opacity: 0.8;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+} */
