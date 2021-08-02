@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="container text-center">
-        <button type="button" class="btn btn-warning d-none" onclick="tirarDado();">Tirar</button>
+        <button type="button" class="btn btn-warning d-none" onclick="tirarDado();" id="btnTirarDado">Tirar</button>
     </div>
     <div id="ranking">
 

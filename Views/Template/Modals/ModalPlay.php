@@ -7,7 +7,7 @@
       <div class="modal-body">
         <input type="hidden" name="regId" id="regId">
         <p id="result"></p>
-        <button class="btn btn-primary btn-lg text-center" id="btnTirar">Tirar</button>
+        <button class="btn btn-primary btn-lg text-center" id="btnTirar" onclick="eventTirar();">Tirar</button>
       </div>      
     </div>
   </div>
